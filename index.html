@@ -17,49 +17,16 @@
                 <tr>
                     <!--button funtion added by layla-->
                     <th>
-                        <a href="index.html" target="_blank">
-                            <button id="home" class="button">Home</button>
-                            <script>
-                                function goToPage(){
-                                    window.location.href = 'readyroutes.html';
-                                }
-                                document.getElementById('home').addEventListener('click', goToPage);
-                            </script>
-                        </a> 
+                        <button onclick="window.location.href='index.html'" id="home" class="button">Home</button>
                     </th>
                     <th>
-                        <a href="aboutUs.html" target="_blank">
-                            <button id="aboutus" class="button">About Us</button>
-                            <script>
-                                function goToPage(){
-                                    window.location.href = 'aboutUs.html';
-                                }
-                                document.getElementById('aboutus').addEventListener('click', goToPage);
-                            </script>
-                        </a>
+                        <button onclick="window.location.href='aboutUs.html'" id="aboutus" class="button">About Us</button>
                     </th>
                     <th>
-                        <a href="contus.html" target="_blank">
-                            <button id="contact" class="button">Contact Us</button>
-                            <script>
-                                function goToPage(){
-                                    window.location.href = 'contus.html';
-                                }
-                                document.getElementById('contact').addEventListener('click', goToPage);
-                            </script>
-
-                        </a>
+                        <button onclick="window.location.href='contus.html'" id="contact" class="button">Contact Us</button>
                     </th>
                     <th>
-                        <a href="what_new.html" target="_blank">
-                            <button id="what_new" class="button">What's New?</button>
-                            <script>
-                                function goToPage(){
-                                    window.location.href = 'what_new.html';
-                                }
-                                document.getElementById('what_new').addEventListener('click', goToPage);
-                            </script>
-                        </a>
+                        <button onclick="window.location.href='what_new.html'" id="what_new" class="button">What's New?</button>
                     </th>
                 </tr>
             </table>
@@ -89,6 +56,17 @@
             <script src="rrtest.js"></script>
             <script async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD21t1Jfiffk_8xJD7i4XjSMbpJpJf0E4o&callback=initMap&libraries=places">
+            </script>
+
+            <!--Sidebar script-->
+            <script>
+                function open(){
+                    document.getElementById("mySidebar").style.display = "block";
+                }
+
+                function close(){
+                    document.getElementById("mySidebar").style.display = "none";
+                }
             </script>
         </div>
         
