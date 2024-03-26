@@ -38,6 +38,16 @@ function calcRoute(directionsService, directionsRenderer){
   });
 }
 
+//Sidebar Scripts --------------------------------------------------
+function openBar(){
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeBar(){
+  document.getElementById("mySidebar").style.display = "none";
+}
+//-------------------------------------------------------------------
+
 
 
 

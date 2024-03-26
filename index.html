@@ -4,33 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="rr.css" id="page_style"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Ready Routes</title>
 </head>
 <body class="border">
     <div>
         <div>
             <h1 class="title1">Welcome to Ready Routes</h1>
+            <button class = "w3-button w3-white w3-xlarge" onClick="openBar()">☰</button>
         </div>
         <!--The 4 options are from Ryan-->
-        <div>
-            <table class="list">
-                <tr>
-                    <!--button funtion added by layla-->
-                    <th>
-                        <button onclick="window.location.href='index.html'" id="home" class="button">Home</button>
-                    </th>
-                    <th>
-                        <button onclick="window.location.href='aboutUs.html'" id="aboutus" class="button">About Us</button>
-                    </th>
-                    <th>
-                        <button onclick="window.location.href='contus.html'" id="contact" class="button">Contact Us</button>
-                    </th>
-                    <th>
-                        <button onclick="window.location.href='what_new.html'" id="what_new" class="button">What's New?</button>
-                    </th>
-                </tr>
-            </table>
-            
+        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+            <button onClick="closeBar()" class="w3-bar-item w3-large">Close &times;</button>
+            <a onclick="window.location.href='index.html'" class="w3-bar-item w3-button">Home</a>
+            <a onclick="window.location.href='aboutUs.html'" class="w3-bar-item w3-button">About Us</a>
+            <a onclick="window.location.href='contus.html'" class="w3-bar-item w3-button">Contact Us</a>
+            <a onclick="window.location.href='what_new.html'" class="w3-bar-item w3-button">What's New?</a>
         </div>
 
         <!--All of this is from Adolfo-->
@@ -57,20 +46,7 @@
             <script async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD21t1Jfiffk_8xJD7i4XjSMbpJpJf0E4o&callback=initMap&libraries=places">
             </script>
-
-            <!--Sidebar script-->
-            <script>
-                function open(){
-                    document.getElementById("mySidebar").style.display = "block";
-                }
-
-                function close(){
-                    document.getElementById("mySidebar").style.display = "none";
-                }
-            </script>
         </div>
-        
     </div>
-    
 </body>
 </html>
