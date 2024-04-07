@@ -13,25 +13,23 @@
 <br>
 
 <div class="topnav">
-    <button class ="w3-button w3-white w3-xlarge" onClick="openBar()">☰</button>
-    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-        <button onClick="closeBar()" class="w3-bar-item w3-large">Close &times;</button>
-        <a onclick="window.location.href='index.html'" class="w3-bar-item w3-button">Home</a>
-        <a onclick="window.location.href='aboutUs.html'" class="w3-bar-item w3-button">About Us</a>
-        <a onclick="window.location.href='contus.html'" class="w3-bar-item w3-button">Contact Us</a>
-    </div>
-        <a class="title">Ready Routes</a>
+    <a href="index.html">
+        <img src="Logo3.jpg" alt="image not found" class="image">
+    </a>
+    <a class="title">Ready Routes</a>
+    <a onclick="window.location.href='aboutUs.html'" class="subtitle">About Us</a>
+    <!-- <a onclick="window.location.href='contus.html'" class="subtitle">Contact Us</a> -->
 </div>
 
 <br>
 
 <div class="toggle">
     <label class="option">
-      <input type="radio" name="radio" checked="">
+      <input type="radio" name="radio" checked="" onclick="checkRadio('Run')">
       <span class="name">Run</span>
     </label>
     <label class="option">
-      <input type="radio" name="radio">
+      <input type="radio" name="radio" onclick="checkRadio('Walk')">
       <span class="name">Walk</span>
     </label>
 </div>
@@ -41,7 +39,7 @@
 <body>
     <div class="bodytext">
         <div class="inputline">
-            <input type="text" placeholder="Source" id ="source" class="inputbox1"/>
+            <input type="text" placeholder="Location" id ="source" class="inputbox1"/>
             <input type="text" placeholder="Distance" class="inputbox2"/>
         </div>
         <button id="submit" class="button1">Get Directions</button>

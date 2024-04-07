@@ -38,17 +38,19 @@ function calcRoute(directionsService, directionsRenderer){
   });
 }
 
-//Sidebar Scripts --------------------------------------------------
-function openBar(){
-  document.getElementById("mySidebar").style.display = "block";
+//Toggle Button Script for testing---------------------------------
+function checkRadio(name) {
+  if (name == "Run") {
+    console.log("Choice: ", name);
+    document.getElementById("Run").checked = true;
+    document.getElementById("Walk").checked = false;
+
+  } else if (name == "Walk") {
+    console.log("Choice: ", name);
+    document.getElementById("Walk").checked = true;
+    document.getElementById("Run").checked = false;
+  }
 }
-
-function closeBar(){
-  document.getElementById("mySidebar").style.display = "none";
-}
-//-------------------------------------------------------------------
-
-
-
+//------------------------------------------------------------------
 
 window.initMap = initMap;
