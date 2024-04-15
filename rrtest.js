@@ -40,15 +40,15 @@ function calcRoute(directionsService, directionsRenderer){
 
 //Toggle Button Script for testing---------------------------------
 function checkRadio(name) {
-  if (name == "Run") {
+  if (name == "Loop") {
     console.log("Choice: ", name);
-    document.getElementById("Run").checked = true;
-    document.getElementById("Walk").checked = false;
+    document.getElementById("Loop").checked = true;
+    document.getElementById("To and Back").checked = false;
 
-  } else if (name == "Walk") {
+  } else if (name == "To and Back") {
     console.log("Choice: ", name);
-    document.getElementById("Walk").checked = true;
-    document.getElementById("Run").checked = false;
+    document.getElementById("To and Back").checked = true;
+    document.getElementById("Loop").checked = false;
   }
 }
 //------------------------------------------------------------------
