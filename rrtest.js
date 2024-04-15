@@ -43,11 +43,11 @@ function checkRadio(name) {
   if (name == "Loop") {
     console.log("Choice: ", name);
     document.getElementById("Loop").checked = true;
-    document.getElementById("To and Back").checked = false;
+    document.getElementById("To-Back").checked = false;
 
-  } else if (name == "To and Back") {
+  } else if (name == "To-Back") {
     console.log("Choice: ", name);
-    document.getElementById("To and Back").checked = true;
+    document.getElementById("To-Back").checked = true;
     document.getElementById("Loop").checked = false;
   }
 }
