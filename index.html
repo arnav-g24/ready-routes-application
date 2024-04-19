@@ -18,18 +18,17 @@
     </a>
     <a class="title"><b><i>Ready Routes</i></b></a>
     <a onclick="window.location.href='aboutUs.html'" class="subtitle">About Us</a>
-    <!-- <a onclick="window.location.href='contus.html'" class="subtitle">Contact Us</a> -->
 </div>
 
 <br>
 
 <div class="toggle">
     <label class="option">
-      <input type="radio" name="radio" checked="" onclick="checkRadio('Loop')">
+      <input type="radio" id="loop" name="radio" checked="" onclick="checkRadio('Loop')">
       <span class="name extra">Loop</span>
     </label>
     <label class="option">
-      <input type="radio" name="radio" onclick="checkRadio('To-Back')">
+      <input type="radio" id="tb" name="radio" onclick="checkRadio('To-Back')">
       <span class="name">To-Back</span>
     </label>
 </div>
@@ -40,7 +39,8 @@
     <div class="bodytext">
         <div class="inputline">
             <input type="text" placeholder="Location" id ="source" class="inputbox1"/>
-            <input type="text" placeholder="Distance" class="inputbox2"/>
+            <input type="text" placeholder="Distance" id="distance" class="inputbox2"/>
+            <input type="text" placeholder="Ending Location" id="end"class="inputbox2"/>
         </div>
         <button id="submit" class="button1">Get Directions</button>
         <div id="map"></div>

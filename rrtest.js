@@ -1,5 +1,4 @@
 //Entire file is from Adolfo
-
 let sourceAutocomplete, destAutocomplete;
 
 function initMap() {
@@ -14,6 +13,13 @@ function initMap() {
   directionsRenderer.setMap(map);
   sourceAutocomplete = new google.maps.places.Autocomplete(document.getElementById("source"))
   destAutocomplete = new google.maps.places.Autocomplete(document.getElementById("dest"))
+
+  document.getElementById("loop").addEventListener("click", ()=> {
+    checkRadio("loop");
+  });
+  document.getElementById("tb").addEventListener("click", ()=> {
+    checkRadio("To-Back");
+  });
 
   document.getElementById("submit").addEventListener("click", () => {
     calcRoute(directionsService, directionsRenderer);
@@ -42,15 +48,16 @@ function calcRoute(directionsService, directionsRenderer){
 function checkRadio(name) {
   if (name == "Loop") {
     console.log("Choice: ", name);
-    document.getElementById("Loop").checked = true;
-    document.getElementById("To-Back").checked = false;
+    document.getElementById("end").style.display='none';
+    document.getElementById("distance").style.display='block';
 
   } else if (name == "To-Back") {
     console.log("Choice: ", name);
-    document.getElementById("To-Back").checked = true;
-    document.getElementById("Loop").checked = false;
+    document.getElementById("end").style.display='block';
+    document.getElementById("distance").style.display='none';
   }
 }
+
 //------------------------------------------------------------------
 
 window.initMap = initMap;
