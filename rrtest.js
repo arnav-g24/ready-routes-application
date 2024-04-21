@@ -20,7 +20,7 @@ function initMap() {
 
   //Uses Places API so that it autocompletes when typing in the inputs, have to do it for each input
   //each input is given a different Id in HTML
-  let sourceAutocomplete = new google.maps.places.Autocomplete(document.getElementById("source"));
+  let sourceAutocomplete = new google.maps.places.Autocomplete(document.getElementById("origin"));
   let firstAutocomplete = new google.maps.places.Autocomplete(document.getElementById("first"));
   let secondAutocomplete = new google.maps.places.Autocomplete(document.getElementById("second"));
   let thirdAutocomplete = new google.maps.places.Autocomplete(document.getElementById("third"));
@@ -32,7 +32,6 @@ function initMap() {
     chooseRouteOption();
   });
   document.getElementById("tb").addEventListener("click", () => {
-    console.log(tb.checked);
     chooseRouteOption();
   });
   
@@ -50,12 +49,12 @@ function getLocation(directionsService, directionsRenderer) {
     };
     const errorCallback = (error) => {
       console.error(error);
-      var inputSource = document.getElementById("source").value; 
+      var inputSource = document.getElementById("origin").value; 
       calcRoute(directionsService, directionsRenderer, inputSource);
     };
     navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
   } else { 
-    var inputSource = document.getElementById("source").value; 
+    var inputSource = document.getElementById("origin").value; 
     calcRoute(directionsService, directionsRenderer, inputSource);
   }
 }
@@ -68,7 +67,7 @@ function calcRoute(directionsService, directionsRenderer, userOrigin){
   //var source = new google.maps.LatLng(defaultOrigin[0], defaultOrigin[1]);
   //var source = document.getElementById("source").value; 
   var source = userOrigin;
-  var first = document.getElementById("source").value;
+  var first = document.getElementById("origin").value;
   // var second = document.getElementById("second").value;
   // var third = document.getElementById("third").value; 
   var waypnt;
