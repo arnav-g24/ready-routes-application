@@ -110,7 +110,7 @@ function checkRadio(name) {
   } else if (name == "To-Back") {
     console.log("Choice: ", name);
     document.getElementById("end").style.display='block';
-    document.getElementById("distance").style.display='none';
+    document.getElementById("distance").style.display='none'; //hello
     tbCheck = true;
   }
 }
